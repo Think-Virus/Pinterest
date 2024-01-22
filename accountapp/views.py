@@ -8,5 +8,5 @@ from django.views.generic import CreateView
 class AccountCreatView(CreateView):
     model = User
     form_class = UserCreationForm
-    success_url = reverse_lazy('accountapp:')
+    success_url = reverse_lazy('accountapp:login')
     template_name = 'accountapp/create.html'
