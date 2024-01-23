@@ -19,7 +19,6 @@ class AccountCreatView(CreateView):
     template_name = 'accountapp/create.html'
 
 
-@method_decorator(has_ownership, 'get')
 class AccountDetailView(DetailView):
     model = User
     context_object_name = 'target_user'
