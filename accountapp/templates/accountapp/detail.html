@@ -12,6 +12,9 @@
                 <h2 style="font-family: 'NanumSquareNeoOTF-Bd'">
                     {{ target_user.profile.nickname }}
                 </h2>
+                <a href="{% url 'profileapp:update' pk=target_user.profile.pk %}">
+                    edit
+                </a>
             {% else %}
                 <a href="{% url 'profileapp:create' %}">
                     <h2 style="font-family: 'NanumSquareNeoOTF-Bd'">
