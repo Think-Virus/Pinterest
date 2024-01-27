@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div style="text-align: center; max-width: 700px; margin: 4rem auto">
+        <img src="{{ target_project.image.url }}" alt=""
+             style="height: 12rem; width: 12rem; border-radius: 20rem; margin-bottom: 2rem; object-fit: cover">
+        <h6 style="color: gray">{{ target_project.created_at }}</h6>
+        <h1>{{ target_project.name }}</h1>
+        <h4>{{ target_project.detail }}</h4>
+    </div>
+
+{% endblock %}
