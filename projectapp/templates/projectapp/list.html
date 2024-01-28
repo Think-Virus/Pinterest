@@ -1,34 +1,24 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
     <style>
         .container {
             padding: 0;
             margin: 0 auto;
-            display: grid;
-            row-gap: 2rem;
-            grid-template-columns: repeat(auto-fill, minmax(20%, auto));
-            justify-items: center; /* Center the items horizontally */
-        }
-
-        .container a {
-            width: 20%;
-            max-width: 10rem;
-            justify-self: center; /* Center the item within the grid cell horizontally */
-            margin: auto; /* Center the item within the container vertically */
         }
 
         .container div {
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
+
             border-radius: 1rem;
         }
 
         .container img {
-            width: 10rem;
-            height: 10rem;
+            width: 7rem;
+            height: 7rem;
             border-radius: 1rem;
             object-fit: cover;
         }
@@ -42,6 +32,7 @@
                 </a>
             {% endfor %}
         </div>
+        <script src="{% static 'js/magicgrid.js' %}"></script>
     {% else %}
         <h1>프로젝트가 존재하지 않습니다.</h1>
     {% endif %}
